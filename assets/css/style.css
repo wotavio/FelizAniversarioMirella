@@ -379,7 +379,7 @@ textarea.form-control {
 
 .home-overlay {
     background-color: rgba(0, 0, 0, 0.3);
-    background-image: linear-gradient( to bottom, rgb(29, 8, 8), rgb(100, 9, 9), white);
+    background-image: linear-gradient( to bottom, #ff1f01, rgb(109, 24, 24), white);
     background-repeat: repeat;
     height: 100%;
     left: 0;
@@ -387,7 +387,7 @@ textarea.form-control {
     top: 0;
     width: 100%;
     z-index: 0;
-    opacity: 95%;
+    opacity: 85%;
 }
 
 .intro {
@@ -853,7 +853,7 @@ textarea.form-control {
     margin: 10px 1%;
     min-width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 60%;
     background: #3085a3;
     text-align: center;
     cursor: pointer;
@@ -863,6 +863,7 @@ textarea.form-control {
     position: relative;
     display: block;
     min-height: auto;
+    max-height: 100%;
     max-width: 100%;
     opacity: 0.8;
 }
@@ -933,7 +934,7 @@ textarea.form-control {
 /*---------------*/
 
 figure.effect-bubba {
-    background: #9e5406;
+    background: #cf432a;
 }
 
 figure.effect-bubba img {
