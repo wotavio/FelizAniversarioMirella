@@ -21,7 +21,7 @@ body {
 
 img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 a {
@@ -248,7 +248,7 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 .pfblock {
-    padding: 120px 0 100px;
+    padding: 0 0 10%;
 }
 
 .pfblock-gray {
@@ -296,7 +296,7 @@ textarea.form-control {
 .pfblock-subtitle {
     font-family: Raleway, "Times New Roman", Times, sans-serif;
     font-style: normal;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .pfblock-line {
@@ -365,7 +365,7 @@ textarea.form-control {
 /* ---------------------------------------------- */
 
 #home {
-    background: url(../images/cover.jpg);
+    background: url(../images/fundo.jpg);
     background-color: #222;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -378,8 +378,8 @@ textarea.form-control {
 }
 
 .home-overlay {
-    background-color: rgba(44, 62, 80, 0.3);
-    background-image: url("../images/pattern.png");
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient( to bottom, rgb(29, 8, 8), rgb(100, 9, 9), white);
     background-repeat: repeat;
     height: 100%;
     left: 0;
@@ -387,12 +387,13 @@ textarea.form-control {
     top: 0;
     width: 100%;
     z-index: 0;
+    opacity: 95%;
 }
 
 .intro {
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: 45%;
     left: 0;
     text-align: center;
     -webkit-transform: translate(0%, -50%);
@@ -489,8 +490,10 @@ textarea.form-control {
 
 #footer {
     background: #222;
+    position: relative;
+    width: 100%;
     text-align: center;
-    padding: 40px 0;
+    padding: 50px 50px;
     color: #FFF;
 }
 
@@ -644,7 +647,7 @@ textarea.form-control {
 
 .scroll-down {
     position: absolute;
-    left: 50%;
+    left: 46%;
     bottom: 40px;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -656,23 +659,6 @@ textarea.form-control {
     text-align: center;
 }
 
-.scroll-down span {
-    position: relative;
-    color: #fff;
-    -webkit-animation-name: drop;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-play-state: running;
-    animation-name: drop;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-}
-
 
 /* ---------------------------------------------- /*
  *Scroll Down2
@@ -680,8 +666,8 @@ textarea.form-control {
 
 .scroll-down2 {
     position: absolute;
-    left: 45%;
-    top: -40%;
+    left: 42%;
+    top: -30%;
     border-style: solid;
     border-color: rosybrown;
     border-radius: 100%;
@@ -1033,6 +1019,7 @@ figure.effect-bubba:hover p {
     margin: 3em auto 0em auto;
     max-width: 90%;
     width: 90%;
+    height: auto;
 }
 
 .cbp-qtrotator .cbp-qtcontent {
@@ -1082,18 +1069,16 @@ figure.effect-bubba:hover p {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .cbp-qtrotator blockquote p {
-    font-size: 2em;
+    font-size: 20px;
     color: #888;
-    font-weight: 300;
-    margin: 0.4em 0 1em;
 }
 
 .cbp-qtrotator blockquote footer {
-    font-size: 1.2em;
+    bottom: 0;
 }
 
 .cbp-qtrotator blockquote footer:before {
@@ -1102,7 +1087,7 @@ figure.effect-bubba:hover p {
 
 .cbp-qtrotator .cbp-qtcontent img {
     float: right;
-    margin-left: 3em;
+    margin-left: 10px;
 }
 
 
@@ -1113,21 +1098,24 @@ figure.effect-bubba:hover p {
         font-size: 70%;
     }
     .cbp-qtrotator img {
-        width: 80px;
+        width: 150px;
     }
 }
 
 #container {
     height: 370px;
     margin: 0 auto;
-    overflow: hidden;
     position: relative;
-    top: -20px;
-    width: 248px;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
 }
 
 #container div {
     position: absolute;
+    display: flex;
+    overflow: hidden;
 }
 
 .pour {
@@ -1167,142 +1155,6 @@ figure.effect-bubba:hover p {
 
 #beaker:after {
     right: -50px;
-}
-
-#liquid {
-    background-color: #edaf32;
-    border: 10px solid #edaf32;
-    border-radius: 0 0 20px 20px;
-    bottom: 0;
-    height: 0px;
-    overflow: hidden;
-    width: 180px;
-}
-
-#liquid:after {
-    background-color: rgba(255, 255, 255, 0.25);
-    bottom: -10px;
-    content: '';
-    height: 200px;
-    left: -40px;
-    position: absolute;
-    transform: rotate(30deg);
-    -webkit-transform: rotate(15deg);
-    width: 110px;
-}
-
-#liquid .bubble {
-    -webkit-animation-name: bubble;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    background-color: rgba(255, 255, 255, 0.2);
-    bottom: 0;
-    border-radius: 10px;
-    height: 20px;
-    width: 20px;
-}
-
-@-webkit-keyframes bubble {
-    0% {
-        bottom: 0;
-    }
-    50% {
-        background-color: rgba(255, 255, 255, 0.2);
-        bottom: 80px;
-    }
-    100% {
-        background-color: rgba(255, 255, 255, 0);
-        bottom: 160px;
-    }
-}
-
-.bubble1 {
-    left: 10px;
-    -webkit-animation-delay: 1000ms;
-    -webkit-animation-duration: 1000ms;
-}
-
-.bubble2 {
-    left: 50px;
-    -webkit-animation-delay: 700ms;
-    -webkit-animation-duration: 1100ms;
-}
-
-.bubble3 {
-    left: 100px;
-    -webkit-animation-delay: 1200ms;
-    -webkit-animation-duration: 1300ms;
-}
-
-.bubble4 {
-    left: 130px;
-    -webkit-animation-delay: 1100ms;
-    -webkit-animation-duration: 700ms;
-}
-
-.bubble5 {
-    left: 170px;
-    -webkit-animation-delay: 1300ms;
-    -webkit-animation-duration: 800ms;
-}
-
-
-/* Foam */
-
-.beer-foam {
-    position: absolute;
-    bottom: 10px;
-}
-
-.foam-1,
-.foam-2,
-.foam-3,
-.foam-4,
-.foam-5,
-.foam-6,
-.foam-7 {
-    float: left;
-    position: absolute;
-    z-index: 999;
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-    background-color: seashell;
-}
-
-.foam-1 {
-    top: -30px;
-    left: -10px;
-}
-
-.foam-2 {
-    top: -35px;
-    left: 20px;
-}
-
-.foam-3 {
-    top: -25px;
-    left: 50px;
-}
-
-.foam-4 {
-    top: -35px;
-    left: 80px;
-}
-
-.foam-5 {
-    top: -30px;
-    left: 110px;
-}
-
-.foam-6 {
-    top: -20px;
-    left: 140px;
-}
-
-.foam-7 {
-    top: -30px;
-    left: 160px;
 }
 
 

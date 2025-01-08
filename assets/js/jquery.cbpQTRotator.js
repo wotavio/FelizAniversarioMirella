@@ -20,6 +20,7 @@
 		this._init( options );
 	};
 
+
 	// the options
 	$.CBPQTRotator.defaults = {
 		// default transition speed (ms)
@@ -27,7 +28,7 @@
 		// default transition easing
 		easing : 'ease',
 		// rotator interval (ms)
-		interval : 8000
+		interval : 5000
 	};
 
 	$.CBPQTRotator.prototype = {
