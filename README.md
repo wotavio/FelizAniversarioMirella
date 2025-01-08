@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pra sua Namorada
 Aplicação WEB Pra sua Namorada: usando HTML 5, CSS 3, Javascript
 
@@ -34,3 +35,6 @@ crislanio.wordpress.com
 ![alt tag](https://raw.githubusercontent.com/crislanio/PraSuaNamorada/master/assets/images/1i.png)
 ![alt tag](https://raw.githubusercontent.com/crislanio/PraSuaNamorada/master/assets/images/2i.png)
 
+=======
+# FelizAnivers-rioMirella
+>>>>>>> d04a4d41bdefa3a4f5f57e5fdd00b8618115bf85
