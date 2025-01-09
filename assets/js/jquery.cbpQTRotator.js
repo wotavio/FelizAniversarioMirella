@@ -76,7 +76,7 @@
                 this._startProgress();
             }
 
-            setTimeout($.proxy(function () {
+            this._rotatorTimeout = setTimeout($.proxy(function () {
                 if (this.support) {
                     this._resetProgress();
                 }
@@ -94,6 +94,12 @@
             // show next item
             this.$items.eq(this.current).addClass('cbp-qtcurrent');
 
+            // Reset and start progress bar
+            if (this.support) {
+                this._resetProgress();
+                this._startProgress();
+            }
+
         },
         _prev: function () {
 
@@ -103,6 +109,12 @@
             this.current = this.current > 0 ? this.current - 1 : this.itemsCount - 1;
             // show previous item
             this.$items.eq(this.current).addClass('cbp-qtcurrent');
+
+            // Reset and start progress bar
+            if (this.support) {
+                this._resetProgress();
+                this._startProgress();
+            }
 
         },
         _startProgress: function () {
@@ -123,6 +135,7 @@
             this.$el.on('mousedown touchstart', function (e) {
                 isDragging = true;
                 startX = e.type === 'mousedown' ? e.pageX : e.originalEvent.touches[0].pageX;
+                clearTimeout(self._rotatorTimeout); // Pause auto-rotation during drag
             });
 
             this.$el.on('mousemove touchmove', function (e) {
@@ -140,6 +153,7 @@
 
             this.$el.on('mouseup touchend', function () {
                 isDragging = false;
+                self._startRotator(); // Resume auto-rotation after drag
             });
         },
         destroy: function () {
@@ -154,6 +168,7 @@
                 'opacity': 1
             });
             this.$el.off('mousedown touchstart mousemove touchmove mouseup touchend');
+            clearTimeout(this._rotatorTimeout);
         }
     };
 
